@@ -54,12 +54,9 @@ namespace MyRobotBit {
      /**	
      * Turns on motor, forward, reverse at the requested speed 
      *
-	 * @param motor which motor to turn on
-	 * @param dir   which direction to go
 	 * @param speed which slow/fast to spin the motor, eg:50
      */
-    //% blockId="Motor_motor_on"
-    //% block="%motor|direction %dir|speed %speed"
+    //% blockId="MyRobotBit_motorON" block="motor %Motors|direction %MotorDirection|speed %speed"
     //% speed.min=0 speed.max=100
     export function motorOn(motor: Motors, dir: MotorDirection, speed: number): void {
         let motorspeed = pins.map(speed,0,100,0,1023)     
