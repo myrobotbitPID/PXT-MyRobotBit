@@ -1,4 +1,4 @@
-﻿/**
+/**
 * Coding control  Motor A and Motor B 
 */
  enum Motors {
