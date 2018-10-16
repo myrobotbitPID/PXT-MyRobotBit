@@ -1,5 +1,5 @@
 ﻿/**
-* Coding control  Motor A and Motor B
+* Coding control  Motor A and Motor B 
 */
  enum Motors {
         //% block="motor A"
@@ -22,27 +22,6 @@ enum StopMode {
         Brake,
         //% block="coast"
         Coast
-    }
-
-enum Rotated {
-        //% block="left"
-        Left,
-        //% block="right"
-        Right
-    }
-
-enum RotatedmS {
-        //% block="left"
-        Left,
-        //% block="right"
-        Right
-    }
-
-enum Turn {
-        //% block="left"
-        Left,
-        //% block="right"
-        Right
     }
 
 //% weight=50 color=#ff6600 icon="\uf11e"
