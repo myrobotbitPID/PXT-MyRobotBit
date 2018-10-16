@@ -1,10 +1,4 @@
-﻿//% weight=50 color="#ff6600" weight=10 icon="\uf11e"
-
-namespace MyRobotBit {
-	/************************************************************************************************************************************************
-	* Robot<>Stem<>Project<>micro:bit 
-	************************************************************************************************************************************************/
-    export enum Motors {
+﻿    enum Motors {
         //% blockId=Motor_motor_A
         //% block="motor A"
         MotorA,
@@ -16,76 +10,79 @@ namespace MyRobotBit {
         MotorAB
     }
 
-    export enum MotorDirection {
+    enum MotorDirection {
         //% block="forward"
         Forward,
         //% block="reverse"
         Reverse
     }
 
-    export enum StopMode {
+    enum StopMode {
         //% block="brake"
         Brake,
         //% block="coast"
         Coast
     }
 
-    export enum Rotated {
+    enum Rotated {
         //% block="left"
         Left,
         //% block="right"
         Right
     }
 
-    export enum RotatedmS {
+    enum RotatedmS {
         //% block="left"
         Left,
         //% block="right"
         Right
     }
 
-    export enum Turn {
+    enum Turn {
         //% block="left"
         Left,
         //% block="right"
         Right
     }
+
+//% weight=50 color="#ff6600" weight=10 icon="\uf11e"
+namespace MyRobotBit {
 
      /**	
      * Turns on motor, forward, reverse at the requested speed 
      *
-	 * @param speed which slow/fast to spin the motor, eg:50
+	 * @param speed which to spin the motor, eg:50
      */
-    //% blockId="MyRobotBit_motorON" block="motor %Motors|direction %MotorDirection|speed %speed"
+    //% blockId="MyRobotBit_motorON" block="motor %Motors | direction %MotorDirection | speed %speed"
     //% speed.min=0 speed.max=100
-    export function motorOn(motor: Motors, dir: MotorDirection, speed: number): void {
+    export function motorOn(motorCH: Motors, dir: MotorDirection, speed: number): void {
         let motorspeed = pins.map(speed,0,100,0,1023)     
  
-	if (motor==Motors.MotorAB && dir==MotorDirection.Forward) {
+	if (motorCH==Motors.MotorAB && dir==MotorDirection.Forward) {
                         pins.analogWritePin(AnalogPin.P13, motorspeed)
                         pins.digitalWritePin(DigitalPin.P14, 0)
 			pins.analogWritePin(AnalogPin.P15, motorspeed)
                         pins.digitalWritePin(DigitalPin.P16, 0)
 	}
-	else if (motor==Motors.MotorA && dir==MotorDirection.Forward) {
+	else if (motorCH==Motors.MotorA && dir==MotorDirection.Forward) {
                         pins.analogWritePin(AnalogPin.P13, motorspeed)
                         pins.digitalWritePin(DigitalPin.P14, 0)
 	}
-	else if (motor==Motors.MotorB && dir==MotorDirection.Forward) {
+	else if (motorCH==Motors.MotorB && dir==MotorDirection.Forward) {
                         pins.analogWritePin(AnalogPin.P15, motorspeed)
                         pins.digitalWritePin(DigitalPin.P16, 0)
 	}
-	if (motor==Motors.MotorAB && dir==MotorDirection.Reverse) {
+	if (motor==MotorsCH.MotorAB && dir==MotorDirection.Reverse) {
                         pins.analogWritePin(AnalogPin.P14, motorspeed)
                         pins.digitalWritePin(DigitalPin.P13, 0)
                         pins.analogWritePin(AnalogPin.P16, motorspeed)
                         pins.digitalWritePin(DigitalPin.P15, 0)
 	}
-	else if (motor==Motors.MotorA && dir==MotorDirection.Reverse) {
+	else if (motorCH==Motors.MotorA && dir==MotorDirection.Reverse) {
                         pins.analogWritePin(AnalogPin.P14, motorspeed)
                         pins.digitalWritePin(DigitalPin.P13, 0)
 	}
-	else if (motor==Motors.MotorB && dir==MotorDirection.Reverse) {
+	else if (motorCH==Motors.MotorB && dir==MotorDirection.Reverse) {
                         pins.analogWritePin(AnalogPin.P16, motorspeed)
                         pins.digitalWritePin(DigitalPin.P15, 0)
 	}
