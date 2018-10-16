@@ -1,12 +1,12 @@
 /**
 * Custom block for control  Motor A and Motor B 
 */
- enum Motors {
-        //% block="motor A"
+enum Motors {
+        //% block="A"
         MotorA,
-        //% block="motor B"
+        //% block="B"
         MotorB,
-        //% block="motor AB"
+        //% block="AB"
         MotorAB
     }
 
@@ -35,7 +35,7 @@ namespace MyRobotBit {
      */
     //% blockId="MyRobotBit_motorON" block="motor %Motors | direction %MotorsDir | speed %speed"
     //% speed.min=0 speed.max=100
-    export function motorON(motorSelect:Motors, direction:MotorsDir, speed:number): void {
+    export function motorON(motorSelect:Motors, direction:MotorsDir, speed:number): void{
         let motorspeed = pins.map(speed,0,100,0,1023)     
  
 	if (motorSelect==Motors.MotorAB && direction==MotorsDir.Forward) {
