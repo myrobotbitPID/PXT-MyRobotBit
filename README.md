@@ -1,2 +1,3 @@
-# robot
-A PXT for Myrobot:Bit ECO PRO
+# pxt-MyRobotBit
+A PXT package to use for MyRobot:Bit
+

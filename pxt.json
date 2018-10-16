@@ -1,0 +1,17 @@
+{
+    "name": "pxt-MyRobotBit",
+    "version": "0.0.1",
+    "description": "A MakeCode package to use MyRobotBit",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "MyRobotBit.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
