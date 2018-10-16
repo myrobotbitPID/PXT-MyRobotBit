@@ -29,7 +29,9 @@ namespace MyRobotBit {
 
      /**	
      * Turns on motor forward reverse at the requested speed 
-     * @param speed   motor speed 0-100, eg: 50
+     * @param speed         motor speed 0-100, eg: 50
+     * @param motorSelect   select motor to control
+     * @param direction     motor direction
      */
     //% blockId="MyRobotBit_motorON" block="motor %Motors | direction %MotorsDir | speed %speed"
     //% speed.min=0 speed.max=100
