@@ -50,7 +50,7 @@ namespace MyRobotBit {
                         pins.analogWritePin(AnalogPin.P15, motorspeed)
                         pins.digitalWritePin(DigitalPin.P16, 0)
 	}
-	if (motor==MotorsSelect.MotorAB && motorDir==Direction.Reverse) {
+	else if (motor==MotorsSelect.MotorAB && motorDir==Direction.Reverse) {
                         pins.analogWritePin(AnalogPin.P14, motorspeed)
                         pins.digitalWritePin(DigitalPin.P13, 0)
                         pins.analogWritePin(AnalogPin.P16, motorspeed)
